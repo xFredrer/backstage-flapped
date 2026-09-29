@@ -1,0 +1,22 @@
+{
+    "name": "SM64 Decomp Environment",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--dns=1.1.1.1",
+        "--dns=8.8.8.8"
+    ],
+    "remoteEnv": {
+        "GIT_TERMINAL_PROMPT": "0"
+    },
+    "postCreateCommand": "bash .devcontainer/check-network.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    }
+}
